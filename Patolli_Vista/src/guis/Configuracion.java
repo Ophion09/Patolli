@@ -29,7 +29,7 @@ public class Configuracion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        fondoLateral = new javax.swing.JPanel();
         btnChico = new javax.swing.JButton();
         btnMediano = new javax.swing.JButton();
         btnGrande = new javax.swing.JButton();
@@ -38,7 +38,7 @@ public class Configuracion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        fondoLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnChico.setText("Chico");
         btnChico.addActionListener(new java.awt.event.ActionListener() {
@@ -46,7 +46,7 @@ public class Configuracion extends javax.swing.JFrame {
                 btnChicoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnChico, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+        fondoLateral.add(btnChico, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
         btnMediano.setText("Mediano");
         btnMediano.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +54,7 @@ public class Configuracion extends javax.swing.JFrame {
                 btnMedianoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnMediano, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+        fondoLateral.add(btnMediano, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
         btnGrande.setText("Grande");
         btnGrande.addActionListener(new java.awt.event.ActionListener() {
@@ -62,9 +62,9 @@ public class Configuracion extends javax.swing.JFrame {
                 btnGrandeActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+        fondoLateral.add(btnGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 320, 370));
+        getContentPane().add(fondoLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 480, 390));
 
         jLabel1.setText("Escoge el tamaño del tablero:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
@@ -81,49 +81,16 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMedianoActionPerformed
 
     private void btnGrandeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrandeActionPerformed
-        // TODO add your handling code here:
+        Partida partida = new Partida();
+        partida.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGrandeActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Configuracion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Configuracion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Configuracion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Configuracion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Configuracion().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnChico;
     private javax.swing.JButton btnGrande;
     private javax.swing.JButton btnMediano;
+    private javax.swing.JPanel fondoLateral;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

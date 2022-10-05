@@ -98,8 +98,8 @@ public class Tablero {
         g.fillPolygon(m);
         
         g.setColor(Color.black);
-        int xValues[] = {20, 220, 20, 100, 300, 500, 580, 380, 580, 500, 300, 100};
-        int yValues[] = {100, 300, 500, 580, 380, 580, 500, 300, 100, 20, 220, 20};
+        int xValues[] = {50, 220, 50, 130, 300, 470, 550, 380, 550, 470, 300, 130};
+        int yValues[] = {130, 300, 470, 550, 380, 550, 470, 300, 130, 50, 220, 50};
         Polygon polygon1 = new Polygon(xValues, yValues, xValues.length);
         g.drawPolygon(polygon1);
 
@@ -148,20 +148,23 @@ public class Tablero {
         g.drawLine(260, 340, 340, 260);
 
         //Auxiliar Blanco
-        g.setColor(Color.white);
-        g.drawLine(500, 20, 580, 100);
-        g.drawLine(20, 100, 100, 20);
-        g.drawLine(20, 500, 100, 580);
-        g.drawLine(500, 580, 580, 500);
-        
-
-        g.drawLine(20, 100, 52, 132);
+//        g.setColor(Color.yellow);
+//        g.drawLine(500, 20, 580, 100);
+//        g.drawLine(20, 100, 100, 20);
+//        g.drawLine(100, 20, 0, 0);
+//        g.drawLine(20, 500, 100, 580);
+//        g.drawLine(500, 580, 580, 500);
+//        
+//
+//        g.drawLine(20, 100, 52, 132);
         
                 //Circunferencia
         g.setColor(Color.black);
+        //        x   y  Ancho Alto GIni G
         g.drawArc(50, 50, 120, 128, 60, 140);
-        g.drawArc(430, 50, 120, 128, 345, 125);
-        g.drawArc(420, 465, 120, 128, 200, 120);
+        g.drawArc(425, 45, 130, 128, 340, 128);
+        g.drawArc(435, 430, 120, 128, 242, 140);
+        g.drawArc(45, 430, 118, 128, 158, 142);
         
     }
 }

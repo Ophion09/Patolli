@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
 package guis;
 
@@ -13,9 +9,27 @@ import java.awt.Polygon;
  * 
  * @author J.Fernando <josefer.hernandez@hotmail.com>
  */
-public class Tablero {
+public class Tablero implements  Component{
+    
+    Casilla casilla;
+    
+    public Tablero(Casilla casilla){
+        this.casilla = casilla;
+    }
+    
+    
     //Esquinas redondeadas
-    public static void paint(Graphics g){
+    //Manda a llamar el metodo dibujar que renderiza el esqueleto del tablero
+
+    @Override
+    public void dibujar(Graphics g) {
+            
+        
+        //El metodo del padre (tablero) se encarga de llamar al metodo dibujar de las casillas
+        Casilla c1 = new Casilla();
+        c1.dibujar(g);
+        
+        
 
                 //Cuadros Amarillos
         
@@ -135,12 +149,7 @@ public class Tablero {
         /*
         Dibujo de casillas para tablero Grande
         */
-        //Ala Izquierda Superior
-        g.drawLine(180, 190, 260, 110);
-        g.drawLine(210, 220, 290, 140);
-        g.drawLine(239, 249, 318, 170);
-        g.drawLine(268, 277, 347, 198);
-        g.drawLine(295, 304, 374, 225);
+        
         
         //Ala Derecha Superior
         g.drawLine(620, 190, 540, 110);
@@ -227,6 +236,10 @@ g.drawArc(147, 77, 120, 128, 60, 140);
 //        g.drawArc(425, 45, 130, 128, 340, 128);
 //        g.drawArc(435, 430, 120, 128, 242, 140);
 //        g.drawArc(45, 430, 118, 128, 158, 142);
-//        
+//    
     }
+
+
+
+ 
 }

@@ -86,7 +86,9 @@ public class Partida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLlenarActionPerformed
-        Tablero.paint(tablero.getGraphics());
+        Component c = new Casilla();
+        Component t = new Tablero((Casilla) c);
+        t.dibujar(tablero.getGraphics());
     }//GEN-LAST:event_btnLlenarActionPerformed
 
     

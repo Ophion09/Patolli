@@ -31,23 +31,27 @@ public class Partida extends javax.swing.JFrame {
         tablero = new javax.swing.JPanel();
         fondoLateral = new javax.swing.JPanel();
         btnLlenar = new javax.swing.JButton();
+        panelDatos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 77, 27));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tablero.setBackground(new java.awt.Color(102, 77, 27));
+        tablero.setPreferredSize(new java.awt.Dimension(800, 650));
+
         javax.swing.GroupLayout tableroLayout = new javax.swing.GroupLayout(tablero);
         tablero.setLayout(tableroLayout);
         tableroLayout.setHorizontalGroup(
             tableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         tableroLayout.setVerticalGroup(
             tableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 660, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        getContentPane().add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 850, 660));
+        getContentPane().add(tablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
 
         btnLlenar.setText("Llenar");
         btnLlenar.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +65,7 @@ public class Partida extends javax.swing.JFrame {
         fondoLateralLayout.setHorizontalGroup(
             fondoLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLateralLayout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLlenar)
                 .addGap(107, 107, 107))
         );
@@ -73,7 +77,10 @@ public class Partida extends javax.swing.JFrame {
                 .addContainerGap(566, Short.MAX_VALUE))
         );
 
-        getContentPane().add(fondoLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 20, 280, 660));
+        getContentPane().add(fondoLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 40, 100, 660));
+
+        panelDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(panelDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 730));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -87,6 +94,7 @@ public class Partida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLlenar;
     private javax.swing.JPanel fondoLateral;
+    private javax.swing.JPanel panelDatos;
     private javax.swing.JPanel tablero;
     // End of variables declaration//GEN-END:variables
 }
